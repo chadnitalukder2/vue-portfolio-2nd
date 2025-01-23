@@ -14,8 +14,8 @@
 .footer {
   text-align: center;
   padding: 20px;
-  background-color: #f8f9fa;
-  color: #495057;
+  background-color: var(--vt-c-black);
+  color: var(--vt-c-white);
   font-size: 16px;
 
   a {

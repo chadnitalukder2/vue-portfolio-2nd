@@ -4,14 +4,14 @@
 
 <template>
     <div class="navbar">
-        <div class="logo">&lt;CN /&gt;</div>
+        <div class="logo">CHADNI</div>
         <div class="nav-links">
             <a href="#">About</a>
             <a href="#">Work</a>
             <a href="#">Testimonials</a>
             <a href="#">Contact</a>
-            <div class="divider"></div>
-
+        </div>
+        <div class="cv">
             <a href="#" class="btn">Download CV</a>
         </div>
     </div>
@@ -23,15 +23,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 12px 60px;
     background: #fffffff0;
     border-bottom: 1px solid #cbcaca54;
 
     .logo {
-        font-size: 1.875rem;
+        font-size: 22px;
         line-height: 1.875rem;
         font-weight: 700;
-        color: #121827;
+        color: var(--vt-c-black);
         letter-spacing: -.02em;
 
     }
@@ -43,37 +43,32 @@
         a {
             margin: 0 15px;
             text-decoration: none;
-            color: #4a4a4a;
+            color: var(--vt-c-black);
             font-size: 1rem;
             line-height: 1.5rem;
-            font-weight: 500;
+            font-weight: 600;
             transition-property: all;
             transition-timing-function: cubic-bezier(.4, 0, .2, 1);
             transition-duration: .15s;
 
             &:hover {
-                color: #121827;
+                color: var(--hover-color);
             }
         }
 
-        .divider {
-            height: 1.5rem;
-            width: .125rem;
-            background-color: #F3F4F6;
-            margin: 0 15px;
-        }
+    }
 
-
+    .cv {
         .btn {
-            background-color: #1a1a1a;
+            background-color: var(--vt-c-black);
             color: #ffffff;
             padding: 8px 18px;
-            border-radius: .75rem;
+            border-radius: 8px;
             text-decoration: none;
-            font-size: 16px;
+            font-size: 13px;
 
             &:hover {
-                background-color: #1a1a1ad6;
+                background-color: var(--hover-color);
                 color: #fff;
             }
         }
