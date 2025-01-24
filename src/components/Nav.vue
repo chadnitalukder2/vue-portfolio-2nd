@@ -23,7 +23,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 60px;
+    padding: 12px 100px;
     background: #fffffff0;
     border-bottom: 1px solid #cbcaca54;
 

@@ -61,12 +61,12 @@
     font-family: 'Archivo Black', sans-serif;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 50px 60px;
-    gap: 50px;
+    padding: 50px 100px;
+    gap: 20px;
 
     .left-home {
         .header-title {
-            font-size: 42px;
+            font-size: 41px;
             margin: 0;
             color: var(--vt-c-black);
             padding-bottom: 16px;
@@ -102,8 +102,6 @@
                 background: var(--vt-c-black);
             }
         }
-
-
     }
 
     .home-img {
