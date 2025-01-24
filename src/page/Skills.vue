@@ -75,6 +75,7 @@
 
 <style lang="scss" scoped>
 .skills_section {
+    font-family: 'Archivo Black', sans-serif;
     padding: 50px 100px;
 
     @media (max-width: 1059px) {

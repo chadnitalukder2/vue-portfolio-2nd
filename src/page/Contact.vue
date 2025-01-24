@@ -37,13 +37,16 @@
 
 <style lang="scss" scoped>
 .contact_section {
+    font-family: 'Archivo Black', sans-serif;
     padding: 50px 100px;
     display: flex;
     justify-content: space-between;
     width: 100%;
+
     @media (max-width: 1059px) {
         padding: 50px 20px;
     }
+
     .form-container,
     .info-container {
         width: 47%;
@@ -78,6 +81,9 @@
                 width: 30%;
                 transition: all .3s ease-in-out;
 
+                @media (max-width: 415px) {
+                    width: 50%;
+                }
             }
 
             button:hover {

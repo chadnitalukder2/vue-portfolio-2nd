@@ -8,6 +8,15 @@
             <h1>My <span>Projects</span> </h1>
         </div>
 
+        <div class="controls">
+            <button type="button">All</button>
+            <button type="button">UI/Ux Design</button>
+            <button type="button">Branding Design</button>
+            <button class="controls-active" type="button">Graphic Design</button>
+            <button type="button">App Development</button>
+            <button type="button">Web Design</button>
+          </div>
+
         <div class="portpoli-massonary">
             <div class="items">
                 <a href="#">
@@ -109,6 +118,7 @@
 
 <style lang="scss" scoped>
 .works_section {
+    font-family: 'Archivo Black', sans-serif;
     padding: 50px 100px;
     @media (max-width: 1059px) {
         padding: 50px 20px;
@@ -129,6 +139,50 @@
 
     }
 }
+
+.controls {
+        margin-bottom: 45px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        @media only screen and (max-width: 992px) {
+          gap: 8px;
+          padding: 0 15px;
+        }
+        button {
+          font-weight: 600;
+          font-size: 15px;
+          padding: 15px;
+          border: none;
+          background: transparent;
+          position: relative;
+          color: var(--vt-c-black);
+          cursor: pointer;
+          @media only screen and (max-width: 992px) {
+            font-size: 14px;
+          }
+          @media only screen and (max-width: 576px) {
+            padding: 10px;
+           }
+          &:hover {
+            color: var(--hover-color);
+            position: relative;
+
+            &::after {
+              content: "";
+              position: absolute;
+              height: 2px;
+              width: 30%;
+              bottom: 0;
+              left: 50%;
+              transform: translatex(-50%);
+              background-color: var(--vt-c-black);
+            }
+          }
+        }
+      }
+
 
 .portpoli-massonary {
     display: grid;

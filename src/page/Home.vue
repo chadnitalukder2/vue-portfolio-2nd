@@ -65,7 +65,7 @@
     gap: 20px;
 
     @media (max-width: 1059px) {
-        padding: 50px 20px;
+        padding: 85px 20px;
     }
 
     @media (max-width: 901px) {

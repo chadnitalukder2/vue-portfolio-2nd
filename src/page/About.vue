@@ -36,7 +36,9 @@
 </template>
 
 <style lang="scss" scoped>
+
 .about_section {
+    font-family: 'Archivo Black', sans-serif;
     padding: 50px 100px;
     display: flex;
     flex-direction: row;

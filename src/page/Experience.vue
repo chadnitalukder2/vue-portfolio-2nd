@@ -86,6 +86,7 @@
 
 <style lang="scss" scoped>
 .experience_section {
+    font-family: 'Archivo Black', sans-serif;
     padding: 50px 100px;
     background: var(--vt-c-black);
 
