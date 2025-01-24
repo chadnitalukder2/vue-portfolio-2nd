@@ -20,12 +20,13 @@
             </form>
         </div>
         <div class="info-container">
-            <h1>Let's <span>talk</span> for<br>Something special</h1>
-            <p>I seek to push the limits of creativity to create high-engaging, user-friendly, and memorable interactive
+            <h1 class="heading">Let's <span>talk</span> for<br>Something special</h1>
+            <p class="description">I seek to push the limits of creativity to create high-engaging, user-friendly, and
+                memorable interactive
                 experiences.</p>
             <div class="contact-info">
-                <p>youremail@gmail.com</p>
-                <p>1234567890</p>
+                <p class="contact">youremail@gmail.com</p>
+                <p class="contact">1234567890</p>
             </div>
         </div>
 
@@ -43,7 +44,7 @@
 
     .form-container,
     .info-container {
-        width: 45%;
+        width: 47%;
     }
 
     .form-container {
@@ -72,11 +73,18 @@
                 border-radius: 5px;
                 font-size: 16px;
                 cursor: pointer;
+                width: 30%;
+                transition: all .3s ease-in-out;
+
+            }
+
+            button:hover {
+                background: #2c2c2c;
             }
 
             .social-icons {
                 display: flex;
-                justify-content: space-between;
+                gap: 20px;
                 margin-top: 15px;
 
                 a {
@@ -85,34 +93,47 @@
                     align-items: center;
                     width: 40px;
                     height: 40px;
-                    border: 1px solid #000;
+                    border: 2px solid #000;
                     border-radius: 5px;
                     color: #000;
                     text-decoration: none;
                     font-size: 18px;
+                    transition: all .3s ease-in-out;
+                }
+
+                a:hover {
+                    color: var(--vt-c-white);
+                    background: var(--vt-c-black);
                 }
             }
         }
     }
 
     .info-container {
-        h1 {
+        .heading {
             font-size: 36px;
             margin: 0;
+            color: var(--vt-c-black);
 
             span {
                 font-weight: 700;
             }
         }
 
-        p {
+
+        .description {
             font-size: 16px;
             margin: 15px 0;
+            color: var(--vt-c-small);
         }
 
         .contact-info {
-            font-size: 18px;
-            font-weight: 700;
+            .contact {
+                font-size: 18px;
+                font-weight: 700;
+                color: var(--vt-c-black);
+            }
+
         }
     }
 
