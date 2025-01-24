@@ -64,12 +64,32 @@
     padding: 50px 100px;
     gap: 20px;
 
+    @media (max-width: 1059px) {
+        padding: 50px 20px;
+    }
+
+    @media (max-width: 901px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
     .left-home {
+        @media (max-width: 901px) {
+            order: 2;
+        }
+
         .header-title {
             font-size: 41px;
             margin: 0;
             color: var(--vt-c-black);
-            padding-bottom: 16px;
+            padding-bottom: 18px;
+
+            @media (max-width: 1267px) {
+                font-size: 33px;
+            }
+
+            @media (max-width: 901px) {
+                font-size: 40px;
+            }
 
             span {
                 font-weight: 700;
@@ -106,6 +126,11 @@
 
     .home-img {
         text-align: center;
+
+        @media (max-width: 901px) {
+            order: 1;
+        }
+
         img {
             max-width: 100%;
             height: auto;
