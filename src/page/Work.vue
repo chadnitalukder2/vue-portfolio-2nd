@@ -19,7 +19,7 @@
 
         <div class="portpoli-massonary">
             <div class="items">
-                <a href="#">
+                <router-link :to="{ path: '/project-details' }">
                     <div class="hidden">
                     </div>
                     <img src="../assets/img/portfolioOne.png">
@@ -27,7 +27,7 @@
                         <p>Graphic Design</p>
                         <h3>The best way to impress your web</h3>
                     </div>
-                </a>
+                </router-link> 
 
 
             </div>
