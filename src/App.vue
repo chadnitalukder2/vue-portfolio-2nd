@@ -6,6 +6,8 @@ import Home from './page/Home.vue';
 import Skills from './page/Skills.vue';
 import Experience from './page/Experience.vue';
 import About from './page/About.vue';
+import Work from './page/Work.vue';
+import Contact from './page/Contact.vue';
 </script>
 
 <template>
@@ -15,6 +17,8 @@ import About from './page/About.vue';
     <Skills/>
     <Experience/>
     <About/>
+    <Work/>
+    <Contact/>
     <Footer/>
   </main>
 </template>
