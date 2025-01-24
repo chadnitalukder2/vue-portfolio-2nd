@@ -6,10 +6,10 @@
     <div class="navbar">
         <div class="logo">CHADNI</div>
         <div class="nav-links">
-            <a href="#">About</a>
-            <a href="#">Work</a>
-            <a href="#">Testimonials</a>
-            <a href="#">Contact</a>
+            <a href="#">About Me</a>
+            <a href="#">Skills</a>
+            <a href="#">Project</a>
+            <a href="#">Contact Me</a>
         </div>
         <div class="cv">
             <a href="#" class="btn">Download CV</a>
@@ -19,7 +19,7 @@
 
 <style lang="scss" scoped>
 .navbar {
-    font-family: Arial, sans-serif;
+    font-family:  'Archivo Black', sans-serif;
     display: flex;
     align-items: center;
     justify-content: space-between;

@@ -12,6 +12,7 @@
 
 <style lang="scss" scoped>
 .footer {
+  font-family:  'Archivo Black', sans-serif;
   text-align: center;
   padding: 20px;
   background-color: var(--vt-c-black);
