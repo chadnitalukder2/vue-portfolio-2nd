@@ -1,58 +1,72 @@
 <script setup>
-
+import Skills from './Skills.vue';
+import Experience from './Experience.vue';
+import About from './About.vue';
+import Work from './Work.vue';
+import Contact from './Contact.vue';
 </script>
 
 <template>
-    <div class="home_section">
+    <div class="portfolio">
+        <div class="home_section">
 
-        <div class="left-home">
-            <h1 class="header-title">
-                Hello I'am
-                <span>
-                    Chadni Talukder.<br />
-                    Frontend
-                </span>
-                <span>
-                    Developer
-                </span>
-                <br />
-                Based In
-                <span>
-                    Bangladesh.
-                </span>
-            </h1>
-            <p class="description">
-                I'm Chadni Talukder Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                Ipsum has
-                been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
-                type
-                and scrambled it to specimen book.
-            </p>
+            <div class="left-home">
+                <h1 class="header-title">
+                    Hello I'am
+                    <span>
+                        Chadni Talukder.<br />
+                        Frontend
+                    </span>
+                    <span>
+                        Developer
+                    </span>
+                    <br />
+                    Based In
+                    <span>
+                        Bangladesh.
+                    </span>
+                </h1>
+                <p class="description">
+                    I'm Chadni Talukder Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                    Ipsum has
+                    been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                    of
+                    type
+                    and scrambled it to specimen book.
+                </p>
 
-            <div class="about-link">
-                <a href="#">
-                    <i class="fab fa-facebook-f">
-                    </i>
-                </a>
-                <a href="#">
-                    <i class="fab fa-twitter">
-                    </i>
-                </a>
-                <a href="#">
-                    <i class="fab fa-github">
-                    </i>
-                </a>
-                <a href="#">
-                    <i class="fab fa-discord">
-                    </i>
-                </a>
+                <div class="about-link">
+                    <a href="#">
+                        <i class="fab fa-facebook-f">
+                        </i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-twitter">
+                        </i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-github">
+                        </i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-discord">
+                        </i>
+                    </a>
+                </div>
+
             </div>
-
+            <div class="home-img">
+                <img src="../assets/img/home-2.png" />
+            </div>
         </div>
-        <div class="home-img">
-            <img src="../assets/img/home-2.png" />
-        </div>
+        <!-- ===================================== -->
+        <Skills />
+        <Experience />
+        <About />
+        <Work />
+        <Contact />
     </div>
+
 
 </template>
 

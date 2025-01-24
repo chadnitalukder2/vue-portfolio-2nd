@@ -1,17 +1,23 @@
-import { createRouter, createWebHistory  } from "vue-router";
-import ProjectDetails from '../page/ProjectDetails.vue'
+import { createRouter, createWebHistory } from 'vue-router';
+import ProjectDetails from '../page/ProjectDetails.vue';
+import Home from '@/page/Home.vue';
+
 const routes = [
     {
-        path: '/project-details',
-        component: ProjectDetails
+        path: '/',
+        name: 'Home', // Name should be a string
+        component: Home,
     },
-]
+    {
+        path: '/project-details',
+        name: 'ProjectDetails', // Name should be a string
+        component: ProjectDetails,
+    },
+];
 
 const router = createRouter({
     history: createWebHistory(),
-    linkExactActiveClass: 'active',
     routes,
-})
+});
 
-
-export default router
+export default router;
