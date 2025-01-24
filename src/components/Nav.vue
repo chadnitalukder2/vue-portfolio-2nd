@@ -26,6 +26,9 @@
     padding: 12px 100px;
     background: #fffffff0;
     border-bottom: 1px solid #cbcaca54;
+    @media (max-width: 1059px) {
+        padding: 12px 20px;
+    }
 
     .logo {
         font-size: 22px;

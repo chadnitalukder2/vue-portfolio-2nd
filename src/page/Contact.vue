@@ -41,7 +41,9 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-
+    @media (max-width: 1059px) {
+        padding: 50px 20px;
+    }
     .form-container,
     .info-container {
         width: 47%;

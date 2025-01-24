@@ -110,6 +110,9 @@
 <style lang="scss" scoped>
 .works_section {
     padding: 50px 100px;
+    @media (max-width: 1059px) {
+        padding: 50px 20px;
+    }
 
     .section_title {
         text-align: center;
