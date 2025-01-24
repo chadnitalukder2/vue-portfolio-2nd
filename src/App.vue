@@ -4,6 +4,8 @@ import Footer from './components/Footer.vue';
 
 import Home from './page/Home.vue';
 import Skills from './page/Skills.vue';
+import Experience from './page/Experience.vue';
+import About from './page/About.vue';
 </script>
 
 <template>
@@ -11,6 +13,8 @@ import Skills from './page/Skills.vue';
     <Nav/>
     <Home/>
     <Skills/>
+    <Experience/>
+    <About/>
     <Footer/>
   </main>
 </template>
