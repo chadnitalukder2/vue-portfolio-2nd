@@ -120,6 +120,7 @@
 .works_section {
     font-family: 'Archivo Black', sans-serif;
     padding: 50px 100px;
+    background: var(--vt-c-black);
     @media (max-width: 1059px) {
         padding: 50px 20px;
     }
@@ -130,7 +131,7 @@
         h1 {
             font-size: 28px;
             margin-bottom: 30px;
-            color: var(--vt-c-black);
+            color: var(--vt-c-white);
 
             span {
                 font-weight: 700;
@@ -157,7 +158,7 @@
           border: none;
           background: transparent;
           position: relative;
-          color: var(--vt-c-black);
+          color: var(--vt-c-white);
           cursor: pointer;
           @media only screen and (max-width: 992px) {
             font-size: 14px;
@@ -166,7 +167,7 @@
             padding: 10px;
            }
           &:hover {
-            color: var(--hover-color);
+            color: #d0cfcf;
             position: relative;
 
             &::after {
@@ -177,7 +178,7 @@
               bottom: 0;
               left: 50%;
               transform: translatex(-50%);
-              background-color: var(--vt-c-black);
+              background-color: #d0cfcf;
             }
           }
         }
