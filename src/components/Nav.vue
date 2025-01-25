@@ -11,7 +11,7 @@ function toggleMenu() {
 <template>
     <div class="main">
         <div class="navbar">
-            <div class="logo">CHADNI</div>
+            <div class="logo"> <Router-Link to="/">CHADNI </Router-Link></div>
             <div class="nav-links">
                 <a href="#">About Me</a>
                 <a href="#">Skills</a>
@@ -25,7 +25,9 @@ function toggleMenu() {
 
         <!-- Mobile Navbar -->
         <div class="mbl_navbar">
-            <div class="logo">CHADNI</div>
+            <div class="logo">
+                <RouterLink to="/">CHADNI</RouterLink>
+            </div>
 
             <div class="hamburger-lines" @click="toggleMenu">
                 <span class="line line1"></span>
@@ -67,12 +69,15 @@ function toggleMenu() {
     }
 
     .logo {
-        font-size: 22px;
-        line-height: 1.875rem;
-        font-weight: 700;
-        color: var(--vt-c-black);
-        letter-spacing: -.02em;
 
+        a {
+            text-decoration: none;
+            font-size: 22px;
+            line-height: 1.875rem;
+            font-weight: 700;
+            color: var(--vt-c-black);
+            letter-spacing: -.02em;
+        }
     }
 
     .nav-links {
@@ -97,19 +102,20 @@ function toggleMenu() {
 
     }
 
-    .cv {
-        .btn {
-            background-color: var(--vt-c-black);
-            color: #ffffff;
-            padding: 8px 18px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-size: 13px;
 
-            &:hover {
-                background-color: var(--hover-color);
-                color: #fff;
-            }
+}
+
+.cv {
+    .btn {
+        background-color: var(--vt-c-black);
+        color: #ffffff;
+        padding: 8px 18px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 13px;
+
+        &:hover {
+            background: #2c2c2c;
         }
     }
 }
@@ -128,11 +134,15 @@ function toggleMenu() {
     position: fixed;
 
     .logo {
-        font-size: 22px;
-        line-height: 1.875rem;
-        font-weight: 700;
-        color: var(--vt-c-black);
-        letter-spacing: -.02em;
+        a {
+            font-size: 22px;
+            line-height: 1.875rem;
+            font-weight: 700;
+            color: var(--vt-c-black);
+            letter-spacing: -.02em;
+            text-decoration: none;
+        }
+
     }
 
     .hamburger-lines {
@@ -202,21 +212,7 @@ function toggleMenu() {
             color: #ffcd38;
         }
 
-        .cv {
-            .btn {
-                background-color: var(--vt-c-black);
-                color: #ffffff;
-                padding: 8px 18px;
-                border-radius: 8px;
-                text-decoration: none;
-                font-size: 13px;
 
-                &:hover {
-                    background-color: var(--hover-color);
-                    color: #fff;
-                }
-            }
-        }
 
     }
 

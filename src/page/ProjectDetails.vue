@@ -1,6 +1,24 @@
 <script setup>
+import { ref } from 'vue';
 
+const slides = ref(null);
+const index = ref(0);
 
+function showSlide() {
+    if (slides.value) {
+        slides.value.style.transform = `translateX(${-index.value * 100}%)`;
+    }
+}
+
+function prevSlide() {
+    index.value = index.value > 0 ? index.value - 1 : slides.value.children.length - 1;
+    showSlide();
+}
+
+function nextSlide() {
+    index.value = index.value < slides.value.children.length - 1 ? index.value + 1 : 0;
+    showSlide();
+}
 </script>
 
 <template>
@@ -11,7 +29,30 @@
         <div class="content">
             <div class="left">
                 <div class="image-slider">
-                    <img src="../assets/img/portfolioOne.png">
+
+                    <div class="slider">
+                        <div class="slides" ref="slides">
+                            <div class="slide" >
+                                <img src="../assets/img/portfolioOne.png">
+                            </div>
+                            <div class="slide" >
+                                <img src="../assets/img/portfolioOne.png">
+                            </div>
+                            <div class="slide" >
+                                <img src="../assets/img/portfolioOne.png">
+                            </div>
+                            <div class="slide" >
+                                <img  src="https://storage.googleapis.com/a1aa/image/I6qhCh7xJcZDP5sw3eXR7LOxe9Wm1qZ5MJFtglRhex2fvziQB.jpg" >
+                            </div>
+                            <div class="slide" >
+                                <img src="https://storage.googleapis.com/a1aa/image/Bzh0DYZezflz8EM6OahAmWv4EdpYfQt7l0Q3WmCwaHNK4ZRoA.jpg" >
+                            </div>
+                        </div>
+                        <div class="navigation">
+                            <i id="prev" @click="prevSlide">❮</i>
+                            <i id="next" @click="nextSlide">❯</i>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -63,6 +104,10 @@
     padding: 50px 100px;
     font-family: 'Archivo Black', sans-serif;
 
+    @media (max-width: 1059px) {
+        padding: 85px 20px;
+    }
+
     .header {
         h1 {
             font-size: 30px;
@@ -76,20 +121,27 @@
     .content {
         display: flex;
         flex-wrap: wrap;
-        gap: 20px;
+        gap: 30px;
 
         .left {
-           flex-basis: 55%;
-            margin-right: 20px;
+            flex-basis: 55%;
+
+            @media (max-width: 840px) {
+                flex-basis: 100%;
+            }
 
             .image-slider img {
                 width: 100%;
-                height: auto;
+                height: 400px;
             }
         }
 
         .right {
             flex-basis: 40%;
+
+            @media (max-width: 840px) {
+                flex-basis: 100%;
+            }
         }
 
     }
@@ -196,6 +248,46 @@
     .left {
         margin-right: 0;
         margin-bottom: 20px;
+    }
+}
+
+//==========slide===================
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+
+    .slides {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        height: 100%;
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+
+            img {
+                width: 100%;
+                border-radius: 10px;
+            }
+        }
+    }
+
+    .navigation {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+
+        i {
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
     }
 }
 </style>
