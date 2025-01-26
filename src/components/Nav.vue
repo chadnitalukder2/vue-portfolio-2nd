@@ -5,6 +5,11 @@ const isMenuOpen = ref(false);
 function toggleMenu() {
     isMenuOpen.value = !isMenuOpen.value;
 }
+//============================================
+function downloadCV() {
+  const url = '../../public/ChadniCv.pdf';
+  window.open(url, '_blank');
+}
 
 </script>
 
@@ -20,7 +25,7 @@ function toggleMenu() {
                 <router-link to="/contact">Contact Me</router-link>
             </div>
             <div class="cv">
-                <a href="#" class="btn">Download CV</a>
+                <button @click="downloadCV" class="btn">Download CV</button>
             </div>
         </div>
 
@@ -138,6 +143,7 @@ function toggleMenu() {
         border-radius: 8px;
         text-decoration: none;
         font-size: 13px;
+        cursor: pointer;
 
         &:hover {
             background: #2c2c2c;
