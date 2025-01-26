@@ -100,7 +100,7 @@ import Contact from './Contact.vue';
                 font-size: 40px;
             }
 
-            @media (max-width: 360px) {
+            @media (max-width: 529px) {
                 font-size: 25px;
             }
 
