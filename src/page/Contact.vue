@@ -61,7 +61,7 @@
             textarea {
                 margin-bottom: 15px;
                 padding: 10px;
-                border: 2px solid var(--vt-c-black);
+                border: 2px solid #444343;
                 border-radius: 5px;
                 font-size: 16px;
             }
@@ -70,6 +70,14 @@
                 height: 100px;
             }
 
+             textarea:focus-visible{
+                outline: none;
+                border: 2px solid #000 ;
+            }
+            input:focus-visible{
+                outline: none;
+                border: 2px solid #000 ;
+            }
             button {
                 padding: 10px;
                 background-color: var(--vt-c-black);
@@ -145,7 +153,7 @@
         }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 829px) {
         flex-direction: column;
         align-items: center;
 
