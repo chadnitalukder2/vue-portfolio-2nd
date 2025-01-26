@@ -61,7 +61,7 @@
             textarea {
                 margin-bottom: 15px;
                 padding: 10px;
-                border: 2px solid #444343;
+                border: 2px solid #4443439c;
                 border-radius: 5px;
                 font-size: 16px;
             }
