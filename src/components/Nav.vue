@@ -7,16 +7,9 @@ function toggleMenu() {
 }
 
 //============================================
-// function downloadCV() {
-//   const url = '../../public/ChadniCv.pdf';
-//   window.open(url, '_blank');
-// }
-const cvUrl = ref('../../public/ChadniCv.pdf');
+const cvUrl = ref('/ChadniCv.pdf');
 
-// Download CV function
-function downloadCV() {
-  window.open(cvUrl.value, '_blank');
-}
+
 
 </script>
 
@@ -54,7 +47,7 @@ function downloadCV() {
                 <router-link to="/work" @click="toggleMenu">Works</router-link>
                 <router-link to="/contact" @click="toggleMenu">Contact</router-link>
                 <div class="cv" style="  margin-top: 20px;">
-                    <button @click="downloadCV" class="btn" style="color: #fff; ">Download CV</button>
+                    <button class="btn" style="color: #fff; ">Download CV</button>
                 </div>
             </div>
         </div>
