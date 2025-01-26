@@ -13,7 +13,8 @@ function toggleMenu() {
         <div class="navbar">
             <div class="logo"> <Router-Link to="/">CHADNI </Router-Link></div>
             <div class="nav-links">
-                <a href="#">About Me</a>
+                <router-link to="/" > Home </router-link>
+                <router-link to="/about"  > About Me </router-link>
                 <a href="#">Skills</a>
                 <a href="#">Project</a>
                 <a href="#">Contact Me</a>
@@ -35,7 +36,7 @@ function toggleMenu() {
                 <span class="line line3"></span>
             </div>
             <div :class="['nav-links', { 'nav-links-open': isMenuOpen }]">
-                <a href="#" @click="toggleMenu">About me</a>
+                <router-link to="/about-me" @click="toggleMenu"> About me </router-link>
                 <a href="#" @click="toggleMenu">Skills</a>
                 <a href="#" @click="toggleMenu">Works</a>
                 <a href="#" @click="toggleMenu">Experience</a>

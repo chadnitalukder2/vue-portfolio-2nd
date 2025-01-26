@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div class="about_section">
+    <section id="about" class="about_section">
         <div class="image-container">
             <img height="300"
                 src="https://storage.googleapis.com/a1aa/image/4Cjg7XGjTObAI9AFm4aL1zwXR6Ipmv9gTXQt8CC2vg6fyHEKA.jpg"
@@ -32,7 +32,7 @@
                 I share tech-related bites and build in public, or you can follow me on GitHub.
             </p>
         </div>
-    </div>
+    </section>
 </template>
 
 <style lang="scss" scoped>
