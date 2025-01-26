@@ -44,7 +44,7 @@
     gap: 20px;
     width: 100%;
     @media (max-width: 1059px) {
-        padding: 50px 20px;
+        padding: 85px 20px;
     }
     .image-container {
         flex: 1;

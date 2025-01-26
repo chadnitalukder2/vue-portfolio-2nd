@@ -122,7 +122,7 @@
     padding: 50px 100px;
     background: var(--vt-c-black);
     @media (max-width: 1059px) {
-        padding: 50px 20px;
+        padding: 85px 20px;
     }
 
     .section_title {

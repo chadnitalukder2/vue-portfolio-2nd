@@ -203,13 +203,13 @@ function toggleMenu() {
             content: '';
             width: 21px;
             height: 2px;
-            color: #ffcd38;
-            background-color: #ffcd38;
+            color: var(--vt-c-black);
+            background-color: var(--vt-c-black);
             margin: 0 auto;
         }
 
         .router-link-active {
-            color: #ffcd38;
+            color: var(--vt-c-black);
         }
 
 
