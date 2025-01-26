@@ -101,7 +101,7 @@ import Contact from './Contact.vue';
             }
 
             @media (max-width: 529px) {
-                font-size: 25px;
+                font-size: 28px;
             }
 
             span {
