@@ -96,13 +96,12 @@ import Contact from './Contact.vue';
             margin: 0;
             color: var(--vt-c-black);
             padding-bottom: 18px;
-
-            @media (max-width: 1267px) {
-                font-size: 33px;
-            }
-
             @media (max-width: 901px) {
                 font-size: 40px;
+            }
+
+            @media (max-width: 360px) {
+                font-size: 25px;
             }
 
             span {
