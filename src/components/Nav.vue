@@ -40,8 +40,8 @@ function toggleMenu() {
                 <router-link to="/skills"  @click="toggleMenu">Skills</router-link>
                 <router-link to="/work"  @click="toggleMenu">Works</router-link>
                 <router-link to="/contact"  @click="toggleMenu">Contact</router-link>
-                <div class="cv">
-                    <a href="#" class="btn">Download CV</a>
+                <div class="cv" style="  margin-top: 20px;">
+                    <a href="#" class="btn" style="color: #fff; ">Download CV</a>
                 </div>
             </div>
         </div>
@@ -199,7 +199,6 @@ function toggleMenu() {
         }
 
         a:hover::after {
-            display: block;
             content: '';
             width: 21px;
             height: 2px;
