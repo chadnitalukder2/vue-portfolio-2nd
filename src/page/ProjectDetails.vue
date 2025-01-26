@@ -105,7 +105,7 @@ function nextSlide() {
     font-family: 'Archivo Black', sans-serif;
 
     @media (max-width: 1059px) {
-        padding: 85px 20px;
+        padding: 50px 20px;
     }
 
     .header {

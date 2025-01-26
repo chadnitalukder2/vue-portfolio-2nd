@@ -79,7 +79,7 @@ import Contact from './Contact.vue';
     gap: 20px;
 
     @media (max-width: 1059px) {
-        padding: 85px 20px;
+        padding: 85px 20px 5px 20px;
     }
 
     @media (max-width: 901px) {

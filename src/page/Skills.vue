@@ -79,7 +79,7 @@
     padding: 50px 100px;
 
     @media (max-width: 1059px) {
-        padding: 85px 20px;
+        padding: 85px 20px 50px 20px;
     }
 }
 
