@@ -221,6 +221,7 @@ function toggleMenu() {
             transition: all 0.3s;
             padding: 15px 20px;
             font-weight: 600;
+            position: relative;
         }
 
         a:hover::after {
@@ -232,8 +233,18 @@ function toggleMenu() {
             margin: 0 auto;
         }
 
-        .router-link-active {
-            color: var(--vt-c-black);
+        .router-link-active{
+            color: #2c2c2c;
+            &::after{
+                content: "";
+                    position: absolute;
+                    height: 2px;
+                    width: 5%;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translatex(-50%);
+                    background-color: #2c2c2c;
+            }
         }
 
 
