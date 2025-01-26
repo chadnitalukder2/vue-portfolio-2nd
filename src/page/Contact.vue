@@ -1,15 +1,40 @@
 <script setup>
+import emailjs from "emailjs-com";
 
+emailjs.init("_zgc5H72kDGcA5Gr_");
+
+function sendEmail(event) {
+    event.preventDefault();
+    const form = event.target;
+    const params = {
+        name: form.querySelector("input[name='name']").value,
+        email: form.querySelector("input[name='email']").value,
+        subject: form.querySelector("input[name='subject']").value,
+        message: form.querySelector("textarea[name='message']").value,
+    };
+
+    emailjs
+        .send("service_xfmrvsg", "template_c5skiws", params) // Replace with your service and template IDs
+        .then(() => {
+            alert("Email sent successfully!");
+        })
+        .catch((error) => {
+            console.error("Error sending email: ", error);
+            alert("Failed to send email. Please try again.");
+        });
+}
 </script>
+
+
 
 <template>
     <div class="contact_section">
         <div class="form-container">
-            <form>
-                <input type="text" placeholder="Your name">
-                <input type="email" placeholder="Email">
-                <input type="text" placeholder="Your website (if exists)">
-                <textarea placeholder="How can I help?"></textarea>
+            <form @submit="sendEmail">
+                <input type="text" name="name" placeholder="Your name">
+                <input type="email" name="email" placeholder="Email">
+                <input type="text" name="subject" placeholder="Subject">
+                <textarea name="message" placeholder="How can I help?"></textarea>
                 <button type="submit">Get In Touch</button>
                 <div class="social-icons">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
