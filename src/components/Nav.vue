@@ -5,10 +5,17 @@ const isMenuOpen = ref(false);
 function toggleMenu() {
     isMenuOpen.value = !isMenuOpen.value;
 }
+
 //============================================
+// function downloadCV() {
+//   const url = '../../public/ChadniCv.pdf';
+//   window.open(url, '_blank');
+// }
+const cvUrl = ref('../../public/ChadniCv.pdf');
+
+// Download CV function
 function downloadCV() {
-  const url = '../../public/ChadniCv.pdf';
-  window.open(url, '_blank');
+  window.open(cvUrl.value, '_blank');
 }
 
 </script>
@@ -25,7 +32,7 @@ function downloadCV() {
                 <router-link to="/contact">Contact Me</router-link>
             </div>
             <div class="cv">
-                <button @click="downloadCV" class="btn">Download CV</button>
+                <a :href="cvUrl" download="My_CV.pdf" class="btn">Download CV</a>
             </div>
         </div>
 
@@ -47,7 +54,7 @@ function downloadCV() {
                 <router-link to="/work" @click="toggleMenu">Works</router-link>
                 <router-link to="/contact" @click="toggleMenu">Contact</router-link>
                 <div class="cv" style="  margin-top: 20px;">
-                    <a href="#" class="btn" style="color: #fff; ">Download CV</a>
+                    <button @click="downloadCV" class="btn" style="color: #fff; ">Download CV</button>
                 </div>
             </div>
         </div>
