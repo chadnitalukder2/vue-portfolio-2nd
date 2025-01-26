@@ -47,7 +47,7 @@ const cvUrl = ref('/ChadniCv.pdf');
                 <router-link to="/work" @click="toggleMenu">Works</router-link>
                 <router-link to="/contact" @click="toggleMenu">Contact</router-link>
                 <div class="cv" style="  margin-top: 20px;">
-                    <button class="btn" style="color: #fff; ">Download CV</button>
+                    <button :href="cvUrl" download="My_CV.pdf" class="btn" style="color: #fff; ">Download CV</button>
                 </div>
             </div>
         </div>
