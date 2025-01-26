@@ -15,9 +15,9 @@ function toggleMenu() {
             <div class="nav-links">
                 <router-link to="/" > Home </router-link>
                 <router-link to="/about"  > About Me </router-link>
-                <a href="#">Skills</a>
-                <a href="#">Project</a>
-                <a href="#">Contact Me</a>
+                <router-link to="/skills" >Skills</router-link>
+                <router-link to="/work" >Project</router-link>
+                <router-link to="/contact" >Contact Me</router-link>
             </div>
             <div class="cv">
                 <a href="#" class="btn">Download CV</a>
@@ -37,10 +37,9 @@ function toggleMenu() {
             </div>
             <div :class="['nav-links', { 'nav-links-open': isMenuOpen }]">
                 <router-link to="/about" @click="toggleMenu"> About me </router-link>
-                <a href="#" @click="toggleMenu">Skills</a>
-                <a href="#" @click="toggleMenu">Works</a>
-                <a href="#" @click="toggleMenu">Experience</a>
-                <a href="#" @click="toggleMenu">Contact</a>
+                <router-link to="/skills"  @click="toggleMenu">Skills</router-link>
+                <router-link to="/work"  @click="toggleMenu">Works</router-link>
+                <router-link to="/contact"  @click="toggleMenu">Contact</router-link>
                 <div class="cv">
                     <a href="#" class="btn">Download CV</a>
                 </div>
