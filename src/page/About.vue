@@ -5,9 +5,7 @@
 <template>
     <section id="about" class="about_section">
         <div class="image-container">
-            <img height="300"
-                src="https://storage.googleapis.com/a1aa/image/4Cjg7XGjTObAI9AFm4aL1zwXR6Ipmv9gTXQt8CC2vg6fyHEKA.jpg"
-                width="300" />
+            <img height="300" src="../assets/img/home.jpg" width="300" />
         </div>
         <div class="text-container">
             <div class="section_title">
