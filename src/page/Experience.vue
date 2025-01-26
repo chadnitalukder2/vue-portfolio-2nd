@@ -144,7 +144,7 @@
             top: 20px;
             right: 20px;
             font-size: 0.9em;
-            color: #ccc;
+            color: rgb(230 227 227);
 
             @media (max-width: 594px) {
                 padding-top: 10px;
@@ -156,7 +156,7 @@
             p {
                 font-size: 0.9em;
                 margin: 15px 0 0 0px;
-                color: #ccccccd6;
+                color: rgb(230 227 227);
             }
 
         }
