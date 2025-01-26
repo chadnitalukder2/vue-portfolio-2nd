@@ -36,7 +36,7 @@ function toggleMenu() {
                 <span class="line line3"></span>
             </div>
             <div :class="['nav-links', { 'nav-links-open': isMenuOpen }]">
-                <router-link to="/about-me" @click="toggleMenu"> About me </router-link>
+                <router-link to="/about" @click="toggleMenu"> About me </router-link>
                 <a href="#" @click="toggleMenu">Skills</a>
                 <a href="#" @click="toggleMenu">Works</a>
                 <a href="#" @click="toggleMenu">Experience</a>
