@@ -1,27 +1,40 @@
 <script setup>
+import { useNotification } from "@kyvg/vue3-notification";
+const { notify }  = useNotification()
 import emailjs from "emailjs-com";
 
-emailjs.init("_zgc5H72kDGcA5Gr_");
+//========================= Initialize EmailJS
+emailjs.init("_zgc5H72kDGcA5Gr_"); 
 
 function sendEmail(event) {
-    event.preventDefault();
-    const form = event.target;
-    const params = {
-        name: form.querySelector("input[name='name']").value,
-        email: form.querySelector("input[name='email']").value,
-        subject: form.querySelector("input[name='subject']").value,
-        message: form.querySelector("textarea[name='message']").value,
-    };
+  event.preventDefault();
 
-    emailjs
-        .send("service_xfmrvsg", "template_c5skiws", params) // Replace with your service and template IDs
-        .then(() => {
-            alert("Email sent successfully!");
-        })
-        .catch((error) => {
-            console.error("Error sending email: ", error);
-            alert("Failed to send email. Please try again.");
-        });
+  const form = event.target;
+  const params = {
+    name: form.querySelector("input[name='name']").value.trim(),
+    email: form.querySelector("input[name='email']").value.trim(),
+    subject: form.querySelector("input[name='subject']").value.trim(),
+    message: form.querySelector("textarea[name='message']").value.trim(),
+  };
+
+  emailjs
+    .send("service_xfmrvsg", "template_c5skiws", params) // Replace with valid IDs
+    .then(() => {
+      notify({
+        title: "Email sent successfully!",
+        type: "success",
+      });
+      alert('Email sent successfully!');
+      form.reset();
+    })
+    .catch((error) => {
+      notify({
+        title: "Failed to send email. Please try again.",
+        message: error.text || "An unexpected error occurred.",
+        type: "error",
+      });
+      console.error("Error sending email:", error);
+    });
 }
 </script>
 
