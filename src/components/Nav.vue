@@ -13,11 +13,11 @@ function toggleMenu() {
         <div class="navbar">
             <div class="logo"> <Router-Link to="/">CHADNI </Router-Link></div>
             <div class="nav-links">
-                <router-link to="/" > Home </router-link>
-                <router-link to="/about"  > About Me </router-link>
-                <router-link to="/skills" >Skills</router-link>
-                <router-link to="/work" >Project</router-link>
-                <router-link to="/contact" >Contact Me</router-link>
+                <router-link to="/"> Home </router-link>
+                <router-link to="/about"> About Me </router-link>
+                <router-link to="/skills">Skills</router-link>
+                <router-link to="/work">Project</router-link>
+                <router-link to="/contact">Contact Me</router-link>
             </div>
             <div class="cv">
                 <a href="#" class="btn">Download CV</a>
@@ -38,9 +38,9 @@ function toggleMenu() {
             <div :class="['nav-links', { 'nav-links-open': isMenuOpen }]">
                 <router-link to="/" @click="toggleMenu"> Home </router-link>
                 <router-link to="/about" @click="toggleMenu"> About me </router-link>
-                <router-link to="/skills"  @click="toggleMenu">Skills</router-link>
-                <router-link to="/work"  @click="toggleMenu">Works</router-link>
-                <router-link to="/contact"  @click="toggleMenu">Contact</router-link>
+                <router-link to="/skills" @click="toggleMenu">Skills</router-link>
+                <router-link to="/work" @click="toggleMenu">Works</router-link>
+                <router-link to="/contact" @click="toggleMenu">Contact</router-link>
                 <div class="cv" style="  margin-top: 20px;">
                     <a href="#" class="btn" style="color: #fff; ">Download CV</a>
                 </div>
@@ -70,7 +70,6 @@ function toggleMenu() {
     }
 
     .logo {
-
         a {
             text-decoration: none;
             font-size: 22px;
@@ -95,11 +94,36 @@ function toggleMenu() {
             transition-property: all;
             transition-timing-function: cubic-bezier(.4, 0, .2, 1);
             transition-duration: .15s;
+            position: relative;
 
             &:hover {
-                color: var(--hover-color);
+                color: #2c2c2c;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    height: 2px;
+                    width: 80%;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translatex(-50%);
+                    background-color: #2c2c2c;
+                }
             }
         }
+        .router-link-active{
+            color: #2c2c2c;
+            &::after{
+                content: "";
+                    position: absolute;
+                    height: 2px;
+                    width: 80%;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translatex(-50%);
+                    background-color: #2c2c2c;
+            }
+        }
+
 
     }
 
